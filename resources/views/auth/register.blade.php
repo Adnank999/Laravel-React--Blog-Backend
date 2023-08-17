@@ -39,6 +39,17 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
+          <!-- Roles -->
+
+          <div class="mt-4">
+            <x-input-label for="role_id" :value="__('Register As')" />
+
+            <select id="role_id" class="block mt-1 w-full" name="role_id" required>
+                <option value = "admin">Admin</option>
+                <option value = "user">User</option>
+            </select>
+        </div>
+
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
